@@ -1,0 +1,23 @@
+TO:	File
+RE:	TimeRpt known bugs
+DATE:	3 Apr 1995
+
+==========================
+
+1.	SEVERITY:	HIGH
+	WM_PAINT causes "new" text to be drawn with white
+	background, not necessarily same background as
+	dialog.
+
+2.	SEVERITY:	EXTREMELY HIGH
+	The "fonts" menu causes a GPF on "some" machines.  It may
+	be connected to the "Multi-Lingual" version of Windows with
+	Hebrew Support (also Windows for Workgroups shows bug).
+	
+	3 April 1995: this bug was apparently due to the use of
+	the "optimize(size)" compiler option on Microsoft C 8.00
+	compiler.  The TIMERPT.EXE is now 81K instead of 69K, but
+	seems to work OK now, at least on Windows for Workgroups.
+	No code was changed.
+
+end of file

@@ -1,0 +1,1 @@
+copy timelog.hlp ..\dist

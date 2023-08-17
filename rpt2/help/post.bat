@@ -1,0 +1,1 @@
+copy timerpt.hlp ..\..\dist

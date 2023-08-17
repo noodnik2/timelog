@@ -1,0 +1,13 @@
+TO:	File
+RE:	History of TimeLog modifications
+DATE:	18 Jan 1995
+
+==========================
+
+Ver    Date	Modification
+---    -------	-----------------------------------------------------------
+1.0.1  18/1/95	Made the internal time accumulation variables "int"
+		rather than "UINT" in order to reflect negative time values.
+
+
+END OF HISTORY.TXT

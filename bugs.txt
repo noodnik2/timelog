@@ -1,0 +1,26 @@
+TO:	File
+RE:	TimeLog known bugs
+DATE:	13 Nov 1994
+
+==========================
+
+(1)	PROBLEM SEVERITY: LOW
+	When a user returns to Windows from a DOS-window, the
+	TimeLog icon is not immediately updated.  Not an excuse,
+	but note that the MS-Windows Clock also exhibits this
+	behavior.
+
+(2)	PROBLEM SEVERITY: LOW
+	Because TimeLog only records time allocated on a project
+	when the project is closed (or TimeLog is closed), time
+	allocated to a project is lost when the user exits Windows
+	in a non-conventional way, such as a power-loss, or a crash
+	(non-recoverable GPF, etc).
+
+	WANTED: SOLUTION
+	Upon initialization, TIMELOG should check that the project
+	last opened was successfully closed.  If not, it should prompt
+	the user to enter an adjustment.  Currently, TimeLog does not
+	warn the user about projects opened but not closed.
+
+END OF BUGS.TXT

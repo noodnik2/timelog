@@ -1,0 +1,130 @@
+mhAddPage macro: "Uses selected text to create new HELP topic page."
+
+Sub MAIN
+	s$ = Selection$()
+	If Len(s$) < 2 Then
+		MsgBox "No Selection"
+		Goto Exit
+	EndIf
+	If (Left$(s$, 1) = "!") Then
+		r$ = mhAddReference.MakePopupRef$(s$)
+		AddPage(Mid$(s$, 2), r$, 1)
+	Else
+		r$ = mhAddReference.MakeRef$(s$)
+		AddPage(s$, r$, 0)
+	EndIf
+Exit:
+End Sub
+
+Sub AddPage(s$, r$, popup)
+	Fnt$ = Font$()
+	If Fnt$ = "" Then Fnt$ = "Times New Roman"
+	pnts = FontSize()
+	If pnts = 0 Then pnts = 10
+	If popup Then
+		WW2_FormatCharacter .Underline = 1
+	Else
+		WW2_FormatCharacter .Underline = 3
+	EndIf
+	WW2_Insert s$
+	WW2_FormatCharacter .Hidden = 1
+	WW2_Insert r$
+	WW2_FormatCharacter .Hidden = 0
+	EditBookmark .Name = "here"
+	EditGoTo .Destination = "%100"
+	InsertBreak .Type = 0
+	If popup Then
+		mhAddReference.InsPopup(r$)
+	Else
+		mhAddReference.InsTopic(r$, s$, s$)
+		FormatParagraph .KeepWithNext = 1
+	EndIf
+	WW2_FormatCharacter .Points = (pnts * 1.6), .Bold = 1
+	WW2_Insert s$
+	InsertPara
+	If Not popup Then FormatParagraph .KeepWithNext = 0
+	ResetChar
+	WW2_FormatCharacter .Points = pnts
+	InsertPara
+	WW2_Insert "(text for " + r$ + " goes here)"
+	InsertPara
+	InsertPara
+	EditGoTo .Destination = "here"
+	EditBookmark .Name = "here", .Delete
+End Sub
+
+----------------------------------
+
+mhAddReference macro: "Creates HELP reference to selected text."
+
+Sub MAIN
+	s$ = Selection$()
+	If Len(s$) < 2 Then
+		MsgBox "No Selection"
+		Goto Exit
+	EndIf
+	If Left$(s$, 3) = "REF" Then
+		EditClear
+		If (InStr(s$, ":") > 0) Then
+			InsFootnote(s$, "+")
+		Else
+			InsFootnote(s$, "#")
+		EndIf
+	Else
+		InsTopic(MakeRef$(s$), s$, s$)
+	EndIf
+Exit:
+End Sub
+
+Sub InsFootnote(ref$, typ$)
+	WW2_InsertFootnote .Reference = typ$
+	WW2_Insert ref$
+	OtherPane
+End Sub
+
+Sub InsPopup(ref$)
+	InsFootnote(ref$, "#")
+End Sub
+
+Sub InsTopic(ref$, ttl$, kwd$)
+	InsFootnote(ref$, "#")
+	InsFootnote(ttl$, "$")
+	InsFootnote(kwd$, "K")
+End Sub
+
+Function MakeRef$(s$)
+	MakeRef$ = "REF_" + MangleString$(s$)
+End Function
+
+Function MakePopupRef$(s$)
+	MakePopupRef$ = "REFP_" + MangleString$(s$)
+End Function
+
+Function MangleString$(s$)
+	r$ = ""
+	t$ = UCase$(s$)
+	l = Len(t$)
+	For i = 1 To l
+		c$ = Mid$(t$, i, 1)
+		e = InStr("ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890", c$)
+		h = InStr("אבגדהוזחטיךכלםמנןסעףפץצקרשת", c$)
+		If (e > 0) Then
+			r$ = r$ + c$
+			If Len(r$) > 15 Then i = l
+		ElseIf (h > 0) Then
+			r$ = r$ + Mid$("EBGDAVZHTICCLMMNNSAPPTTKRST", h, 1)
+			If Len(r$) > 15 Then i = l
+		End If
+	Next
+	MangleString$ = r$
+End Function
+
+-------------------------------------------------
+
+mhDblUnderline macro: "Doubly-underlines selected text"
+
+Sub MAIN
+	WW2_FormatCharacter .Underline = 3
+End Sub
+
+--------------------------------------------------

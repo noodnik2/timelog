@@ -1,0 +1,19 @@
+;	Revision:	2
+;
+
+[options]
+	compress=true
+	title=TimeLog Report Help
+	copyright=Copyright (C) 1994, by Marty Ross
+	errorlog=timerpt.log
+
+[files]
+	timerpt.rtf
+
+[config]
+	BrowseButtons()
+	
+[map]
+	#include <timerpt.map>
+
+; end of timerpt.hpj

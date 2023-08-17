@@ -1,0 +1,74 @@
+BUGS.TXT:	
+
+------------------------------------------------------------------------
+TO:	TimeLog User
+FROM:	Marty Ross
+DATE:	7 Nov 1994
+RE:	Known problems in TimeLog/TimeRpt 1.0
+------------------------------------------------------------------------
+
+NOTES:
+(1)	TimeLog is Copyright (C) 1994 by Marty Ross, ALL RIGHTS RESERVED.
+(2)	TimeLog requires Microsoft Windows 3.1 or compatible.
+
+
+The following problems are known, and will be fixed in decreasing order
+of severity in future releases of TimeLog/TimeRpt:
+
+
+TimeLog problems:
+
+(1)	PROBLEM SEVERITY: LOW
+	When a user returns to Windows from a DOS-window, the
+	TimeLog icon is not immediately updated.  Not an excuse,
+	but note that the MS-Windows Clock also exhibits this
+	behavior.
+
+(2)	PROBLEM SEVERITY: LOW
+	Because TimeLog only records time allocated on a project
+	when the project is closed (or TimeLog is closed), time
+	allocated to a project is lost when the user exits Windows
+	in a non-conventional way, such as a power-loss, or a crash
+	(non-recoverable GPF, etc).
+
+	WANTED: SOLUTION
+	Upon initialization, TIMELOG should check that the project
+	last opened was successfully closed.  If not, it should prompt
+	the user to enter an adjustment.  Currently, TimeLog does not
+	warn the user about projects opened but not closed.
+
+
+TimeRpt problems:
+
+(1)	PROBLEM SEVERITY: VERY HIGH
+	When the "User Name" is not defined, the "Report Header"
+	section is not printed.
+
+(2)	PROBLEM SEVERITY: HIGH
+	Paging up and down in report is very slow.
+
+(3)	PROBLEM SEVERITY: HIGH
+	The background color for text in the report window is not
+	set correctly when the report is redrawn due to WM_PAINT
+	messages.
+
+(4)	PROBLEM SEVERITY: MEDIUM
+	Time allocated to the currently "active" project since it
+	was last opened is not reflected in the report.
+
+(5)	PROBLEM SEVERITY: MEDIUM
+	Font selection is not currently being stored in the
+	initiazation file.  This means that user needs to respecify
+	font selection each time before printing.
+
+(6)	PROBLEM SEVERITY: MEDIUM
+	The initial font selection (default printer font) cannot be
+	restored after selecting a new font in the "Options:Fonts..."
+	menu action.
+
+(7)	PROBLEM SEVERITY: MEDIUM
+	No mention is made, even in the most detailed report, of
+	irregularities in the log file such as projects that were
+	opened and not closed, etc.
+
+END OF BUGS.TXT

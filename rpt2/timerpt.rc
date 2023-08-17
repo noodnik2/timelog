@@ -1,0 +1,207 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+ABORTDLG DIALOG DISCARDABLE  0, 0, 163, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION
+CAPTION "Printing TimeLog Report:"
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "&Cancel",IDCANCEL,56,46,50,14
+    EDITTEXT        IDC_EDITNAME,4,12,156,27,ES_CENTER | ES_MULTILINE | 
+                    ES_READONLY | NOT WS_BORDER
+END
+
+DLGTS DIALOG DISCARDABLE  0, 0, 127, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "Report TimeSpan"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,68,10,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,68,26,50,14,NOT WS_TABSTOP
+    GROUPBOX        "P&eriods:",IDC_STATIC,6,7,47,54,WS_GROUP
+    CTEXT           "&Number",IDC_STATIC,15,47,30,8
+    SCROLLBAR       IDC_SCROLLPERIODS,18,36,22,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITPERIODS,18,23,22,13,ES_CENTER | ES_MULTILINE | 
+                    ES_AUTOHSCROLL | ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Cut-Off Date/&Time:",IDC_STATIC,6,66,112,54,WS_GROUP
+    CTEXT           "&Mon",IDC_STATIC,14,105,20,8
+    SCROLLBAR       IDC_SCROLLMONTH,13,95,21,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITMONTH,13,82,21,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "&Day",IDC_STATIC,33,105,18,8
+    SCROLLBAR       IDC_SCROLLDAY,34,95,17,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITDAY,34,82,17,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "&Year",IDC_STATIC,52,105,21,8
+    SCROLLBAR       IDC_SCROLLYEAR,51,95,22,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITYEAR,51,82,22,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "&Hr",IDC_STATIC,79,105,17,8
+    SCROLLBAR       IDC_SCROLLHOUR,79,95,16,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITHOUR,79,82,16,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "M&in",IDC_STATIC,95,105,15,8
+    SCROLLBAR       IDC_SCROLLMINUTE,95,95,16,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITMINUTE,95,82,16,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+END
+
+DLGRPT DIALOG DISCARDABLE  0, 0, 323, 197
+STYLE WS_MAXIMIZEBOX | WS_VISIBLE | WS_CAPTION | WS_VSCROLL | WS_HSCROLL | 
+    WS_SYSMENU | WS_THICKFRAME
+CAPTION "TimeLog Report"
+MENU IDR_MENU4
+FONT 8, "MS Sans Serif"
+BEGIN
+END
+
+DLGVARS DIALOG DISCARDABLE  0, 0, 251, 58
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "TimeLog Report Variables"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "User &Name",IDC_STATIC,14,8,166,39,WS_GROUP
+    EDITTEXT        IDC_USERNAME,23,24,149,12,ES_AUTOHSCROLL | NOT WS_BORDER
+    DEFPUSHBUTTON   "OK",IDOK,191,12,50,14,WS_GROUP
+    PUSHBUTTON      "Cancel",IDCANCEL,191,29,50,14,NOT WS_TABSTOP
+END
+
+DLGABOUT DIALOG DISCARDABLE  0, 0, 162, 76
+STYLE DS_MODALFRAME | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "About TimeRpt"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,56,52,50,14
+    CTEXT           "TimeRpt 1.0",IDC_STATIC,11,8,140,10,NOT WS_GROUP
+    CTEXT           "TimeLog Report Program",IDC_STATIC,11,21,140,10,NOT 
+                    WS_GROUP
+    CTEXT           "Copyright (C) 1994, by Marty Ross",IDC_STATIC,11,34,140,
+                    10,NOT WS_GROUP
+END
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_ICONLOG             ICON    DISCARDABLE     "ICONLOG.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU4 MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Print",                      ID_FILE_PRINT
+        MENUITEM "Print &Setup",                ID_FILE_PRINTSETUP
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       ID_FILE_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Totals",                     ID_OPTIONS_TOTALS
+        MENUITEM "&Comments",                   ID_OPTIONS_COMMENTS
+        MENUITEM "&Allocations",                ID_OPTIONS_ALLOCATIONS
+        MENUITEM "Ad&justments",                ID_OPTIONS_ADJUSTMENTS
+        MENUITEM "&Sparse",                     ID_OPTIONS_SPARSE
+        MENUITEM SEPARATOR
+        POPUP "Time &Unit..."
+        BEGIN
+            MENUITEM "&Days",                       ID_OPTIONS_TIMEPERIOD_DAYS
+
+            MENUITEM "&Months",                     ID_OPTIONS_TIMEPERIOD_MONTHS
+
+            MENUITEM "&Years",                      IDR_MENU3
+        END
+        POPUP "Time &Format..."
+        BEGIN
+            MENUITEM "F&raction",                   ID_OPTIONS_TIMEDISPLAY_FRACTION
+
+            MENUITEM "&hh:mm",                      ID_OPTIONS_TIMEDISPLAY_HHMM
+
+        END
+        POPUP "&Entry Format..."
+        BEGIN
+            MENUITEM "&Name",                       ID_OPTIONS_ENTRYTYPE_NAME
+
+            MENUITEM "&Label",                      ID_OPTIONS_ENTRYTYPE_LABEL
+
+            MENUITEM "Name &and Label",             ID_OPTIONS_ENTRYTYPE_NAMEANDLABEL
+
+        END
+        MENUITEM SEPARATOR
+        MENUITEM "&Report Period...",           ID_OPTIONS_TIMESPAN
+        MENUITEM "User Name...",                ID_OPTIONS_VARS
+        MENUITEM SEPARATOR
+        MENUITEM "&Fonts...",                   ID_OPTIONS_FONTS
+    END
+    POPUP "&Help", HELP
+    BEGIN
+        MENUITEM "Contents",                    ID_HELP_CONTENTS
+        MENUITEM SEPARATOR
+        MENUITEM "About",                       ID_HELP_ABOUT
+    END
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

@@ -1,0 +1,19 @@
+;	Revision:	3
+;
+
+NAME      	TIMERPT
+DESCRIPTION	'TimeLog Report 1.0.00 - Copyright (C) 1994, by Marty Ross'
+EXETYPE		WINDOWS
+CODE		PRELOAD MOVEABLE DISCARDABLE
+DATA		PRELOAD MOVEABLE MULTIPLE
+HEAPSIZE	10240
+
+EXPORTS
+	tlrpthlp_HelpKeyHook
+	tlrptdlg_DialogProc
+	tlrptabt_DialogProc
+	tlrptts_DialogProc
+	AbortProc
+	AbortDialogProc
+
+; end of timerpt.def

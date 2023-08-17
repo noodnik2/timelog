@@ -1,0 +1,1 @@
+copy timelog.exe dist

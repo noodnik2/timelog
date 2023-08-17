@@ -1,0 +1,67 @@
+SETUP.TXT:	
+
+------------------------------------------------------------------------
+TO:	TimeLog User
+FROM:	Marty Ross
+DATE:	7 Nov 1994
+RE:	Setting up the TimeLog Program
+------------------------------------------------------------------------
+
+NOTES:
+(1)	TimeLog is distributed as a self-extracting MS-DOS archive.
+(2)	TimeLog is Copyright (C) 1994 by Marty Ross, ALL RIGHTS RESERVED.
+(3)	TimeLog requires Microsoft Windows 3.1 or compatible.
+
+
+To setup TimeLog for the first time, follow the procedure below:
+
+(1)	Enter Microsoft Windows 3.1 or compatible.
+(2)	Enter a DOS session from within Windows (steps 3-4 are performed
+	in DOS).
+(3)	Create a sub-directory anywhere in your directory tree called TIMELOG.
+(4)	Change to this new directory, and execute the TimeLog distribution
+	self-extracting archive program.  This will copy all of the necessary
+	TimeLog files into the current directory.
+(5)	Toggle back to Windows, and create a "TimeLog" group in the Program
+	Manager by selecting "File", "New", "Program Group", and specify
+	"TimeLog" as the description.
+(6)	Create a "TimeLog" item in the new group, again by selecting "File",
+	"New", but this time "Program Item", and again specify "TimeLog" as
+	the description.  Fill in "timelog.exe" for the command line, and
+	give the full path of the new TIMELOG directory you created in
+	step (3) above as the working directory.
+(7)	Create a "TimeLog Help" item in the new group by selecting "File",
+	"New", "Program Item", and specify "TimeLog Help" as the description.
+	Fill in "winhelp timelog.hlp" for the command line, and give the full
+	path of the new TIMELOG directory you created in step (3) above as
+	the working directory.
+(8)	Locate and open your "Startup" group by double-clicking on the
+	"Startup" group icon.  Position the group window so that you can
+	still see the TimeLog program item that you created in step (6),
+	above.
+(9)	Make a copy of the TimeLog program item (step 6, above), by clicking
+	on the "TimeLog" program icon, holding down the "Ctrl" key, and
+	dragging (a copy of ) the TimeLog program item into the Startup
+	group.  When you release the mouse (stop dragging), you should see
+	two copies of the TimeLog program icon: one in the TimeLog group,
+	and the other in the "Startup" group. 
+
+If all steps above are executed successfully, then TimeLog is installed.
+The next time you start Windows, TimeLog will become active.
+
+Since initially there are no projects defined, you might want to start
+TimeLog manually at this point (by double-clicking on the TimeLog program
+icon), and define at least one project by pressing the "New" button in the
+"Project" group.  You should select the newly created project to be your
+"Current Project", and optionally also your "Overhead Project".  See the
+"Projects" entry of the help file for more information about projects.
+
+Note that context-sensitive help can be invoked in TimeLog and TimeRpt
+at all times by pressing F1.
+
+*** NOTE!:	Because of a known bug in TimeRpt (see BUGS.TXT), the
+		header section will not appear in your reports until you
+		define your user name.  Select "Options:User Name..."
+		in the TimeRpt dialog.
+
+END OF SETUP.TXT

@@ -1,0 +1,7 @@
+setup.txt
+bugs.txt
+timelog.hlp
+timelog.exe
+timerpt.exe
+timerpt.hlp
+timedump.c

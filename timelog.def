@@ -1,0 +1,25 @@
+;	Revision:	3
+;
+;
+;	timelog.def
+;
+
+NAME		TIMELOG
+
+DESCRIPTION	'TimeLog 1.0.1 - Copyright (C) 1994-1995, by Marty Ross'
+EXETYPE		WINDOWS
+STUB		'WINSTUB.EXE'
+CODE		PRELOAD MOVEABLE DISCARDABLE
+DATA		PRELOAD MOVEABLE MULTIPLE
+HEAPSIZE	4096
+
+EXPORTS
+	WindowProc
+	DialogProc
+	DialogNewProc
+	DialogAdjProc
+	HelpKeyHook
+
+;
+;	end of timelog.def
+;

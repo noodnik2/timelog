@@ -1,0 +1,21 @@
+;	Revision:	4
+;
+;
+
+[options]
+	compress=true
+	title=TimeLog Help
+	contents=REF_CONTENTS
+	copyright=Copyright (C) 1994, by Marty Ross
+	errorlog=timelog.log
+
+[files]
+	timelog.rtf
+
+[config]
+	BrowseButtons()
+	
+[map]
+	#include <timelog.map>
+
+; end of timelog.hpj

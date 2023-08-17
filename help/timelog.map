@@ -1,0 +1,15 @@
+/*	Revision:	2
+*/
+
+/*
+	timelog.map
+	
+*/
+
+#define	REF_CONTENTS		1
+#define	REF_PROJECT		2
+#define	REF_NEWPROJECT		3
+#define	REF_ADJUSTMENTS		4
+
+/* end of timelog.map */
+

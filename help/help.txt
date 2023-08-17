@@ -1,0 +1,26 @@
+Overview
+	"Overhead Project"
+	Names & Labels
+Dialogs
+	Project
+	New Project
+	Adjustments
+	Report
+Installation/Configuration
+Tips
+
+Sub MAIN
+	s$ = Selection$()
+	If len(s$)< 1 Then
+		MsgBox "No Selection"
+		Goto Exit
+	EndIf
+	f$ = "REF_"
+	r$ = f$ + UCase$(s$)
+	FormatCharacter .Underline = 3
+	Insert s$
+	FormatCharacter .Hidden = 1
+	Insert r$
+	FormatCharacter .Hidden = 0
+Exit:
+End Sub

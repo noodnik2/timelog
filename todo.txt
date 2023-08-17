@@ -1,0 +1,67 @@
+Revision:	2
+
+x	1.	Make REPORT dialog a modal dialog,
+		returning to main dialog when done.
+	
+x	2.	write "adjustment" to file
+
+x	3.	process "adjustments" in all places
+		where file is read.
+
+x	4.	write "comments" dialog.
+
+x	5.	write "comments" to file.
+
+x	6.	add "comments" checkbox to report dialog,
+		and print comments in report if checked.
+
+x	7.	Implement new report dialog "DLGREPORT_NEW",
+		and new sub-dialog "DLGNEWREPORT", and "delete"
+		button for "Overhead" account.
+
+x	8.	Add labels
+
+x	9.	make "total" time as reported on icon reflect the sum of
+		all projects, NOT the current session time (this is more
+		accurate, especially in the case of a crash).
+
+x	10.	Add "comments" section to "adjustments" dialog.
+
+	11.	Link comment record to adjustment in report via ltime_a.
+
+	12.	Make "auto-save" feature, time settable.  This will stop,
+		and restart the current project every so often in order
+		to guard against lost log-time in case of crash.  Should
+		it also write to the .INI file?
+
+x	13.	Split report if wraps off of right of "page".
+
+x	14.	report to printer.
+
+	15.	fix "problem": when DOS returns to windows, ICON not updated
+		(are there any messages arriving to icon on this event?)
+
+x	16.	Fix bug: on "EndSession", must write out profile data.
+
+	17.	If upon initialization, TIMELOG finds that a previous
+		session was active on the same day, asks the user if
+		he/she wants to make an adjustment in order to allocate
+		the (unbilled) time to a project.  If so, invokes the
+		adjustment dialog with the amount of time elapsed as
+		the initial adjustment amount.
+
+	18.	Doesn't currently "act" like normal window application,
+		in that when you click on the "TimeLog" icon, a dialog
+		box pops up, and the "TimeLog" icon stays there.  The
+		"TimeLog" icon should represent the dialog box, and the
+		"System" menu of the dialog should be disabled.  The
+		dialog should only have a minimize box.
+
+	19.	Like the "Iris" anti-virus program, ask if user really
+		wants to leave when he clicks twice on the System Menu,
+		so that the default value of "No, just minimize the
+		dialog" is what it currently does, but that the option
+		of really closing the TimeLog be available.
+
+	20.	make "Always on Top" option.
+

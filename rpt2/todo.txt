@@ -1,0 +1,71 @@
+Revision:	1
+
+NOTE:	split the module "TLRPTDLG"; use the new "menuchk" module.
+
+
+x	1.	Make printer report dynamic:
+		A.	Folds table when too many columns.
+		B.	Word-wraps comments.
+
+x	2.	Bug.  Why are there apparently "empty" columns that have
+		a positive total when you print 60 entries, when you
+		select "Labels only" as the entry selection?  For example,
+		"Wed, Aug 3" has 10:42 to a project it doesn't list (QSMSG0A1).
+
+		A:	was omitting the first column
+
+
+x	3.	put a message out when the report can't fit all of the columns
+		or rows requested (bOverflow).
+
+		A:	now just beeps
+
+
+	4.	Browse/print-preview mode:
+
+x		a.	Should have "current printer" definition.
+			Add a pushbutton to set the printer.
+
+			A:	use menu instead of button
+
+x		b.	Use the "current printer" when printing,
+			and use the paper size of the "current
+			printer" when previewing.
+
+			A:	"sort of" WYSIWYG
+
+	5.	Font selection:
+
+		1.	Must be able to get back to initial font
+			selection.  Currently, cannot return to
+			initial font.
+
+		2.	Should save current font selection in
+			initiazation file.  Probably should be
+			only characteristic of font face name,
+			and font size.  font family, pitch, etc.,
+			are they necessary?
+
+	6.	Create new report, "detail", which shows the individual
+		log entries.  Show regular entries, adjustments, and
+		make note of log irregularities such as crashes.
+
+	7.	Make report reflect time from currently "open" project.
+
+	8.	Make paging up and down in report faster.
+		Can easily add "scrolling" by using "ScrollWindow" (?)
+		function, etc.
+
+	9.	Make "Open", "Save", and "Save As..." items for the "File"
+		menu.  What will be saved is all parameters affecting
+		report generation, so that a "particular" report can be
+		recalled/reprinted, etc.
+
+	10.	Make "Move" option for "adjustments" to move a certain
+		amount of time from one "place" to another.
+
+	11.	Make "Reverse" option (possibly integrated with "detail"
+		report?? See #6) that reverses the effect of a particular
+		log transaction by entering a reversing transaction.
+
+END OF TODO.TXT

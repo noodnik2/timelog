@@ -1,0 +1,19 @@
+Report:		Daily
+Printed:	Sun Aug 21 17:46 1994
+Period:		Wed Aug 17 00:00 1994 through Sun Aug 21 17:46 1994
+
+             Entry  Wed17  Thu18  Fri19  Sat20  Sun21  Total
+    ARC21/Overhead   0:14   0:03                 0:00   0:18
+   sd/Msg Handling   5:49   0:00                 4:42  10:31
+   Personal Matter   4:27                               4:27
+           TimeLog   0:36                               0:36
+Technology/Support         10:22                 2:15  12:37
+          DynaComm                               0:22   0:22
+             Total  11:07  10:25                 7:20  28:54
+
+
+                  Date Comment
+ Thu Aug 18 22:40 1994 helped Shimon at Migdal all day (data queue daemon)
+ Sun Aug 21 12:13 1994 Adjustment to 'Technology/Support' on Sun Aug 21 12:13 1994: 2:15
+ Sun Aug 21 12:13 1994 Researching apparent bug in PC Support/AS400 Data Queue API
+ Sun Aug 21 12:24 1994 Search for bug for Moshe Michaeli

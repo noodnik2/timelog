@@ -1,0 +1,13 @@
+/*	Revision:	1
+*/
+
+/*
+	timerpt.map
+*/
+
+#define	REF_CONTENTS		1
+#define	REF_REPORT		2
+#define	REF_USERNAME		3
+#define	REF_TIMESPANCUTOFF	4
+
+/* end of timerpt.map */

@@ -1,0 +1,45 @@
+SUBMISSION:	21.11.94
+
+	TimeLog 1.0.0
+	TimeRpt 1.0.0
+	TLDIST   EXE    141401 11-21-94   1:49a:
+
+	 Length  Size  Rat  Date   Time   CRC-32   Name
+	 ------  ----- ---- ----   ----   -------- ----
+	   3238   1359 59%  11-21  01:47  01cc1d91 SETUP.TXT
+	   2413   1118 54%  11-21  01:49  a3525900 BUGS.TXT
+	  46480  32865 30%  11-13  22:53  4b4c13f8 TIMELOG.HLP
+	  42800  21950 49%  11-14  18:57  7dfe9cd3 TIMELOG.EXE
+	  69920  28681 59%  11-13  22:43  cf579e25 TIMERPT.EXE
+	  50977  35655 31%  11-13  22:54  108f6439 TIMERPT.HLP
+	  11185   3307 71%  11-08  03:14  67a7f0d2 TIMEDUMP.C
+	 ------  ----- ---                         -------
+	 227013 124935 45%                         7
+
+FORUM:
+Windows Shareware
+
+SECTION:
+PIM/Info Utils
+
+FILE:
+E:\MARTY\WINDEV\TIMELOG\DIST\TLDIST.EXE
+
+TITLE:
+TimeLog 1.0 - project time tracker
+
+KEYWORDS:
+TIME LOG TIMESHEET PROJECT WORK ACCOUNTING BILLING TRACKING TASK RECORDING
+
+DESCRIPTION:
+TimeLog 1.0 - Copyright (C) 1994 by Marty Ross
+
+With TimeLog, tracking time spent on projects at work is a relatively automated, precise, and simple task.  At the end of the month, simply press "print" and hand-in your time-sheet!
+
+Features:
+(1) Small, self-contained shareware program.  No usage fees or "registration".
+(2) Context-sensitive Windows help.
+(3) Can install custom report program; C/API source included.
+(4) Standard report program is WYSIWYG and highly configurable.
+(5) Source available upon request.
+

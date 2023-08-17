@@ -1,0 +1,236 @@
+//Microsoft App Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+DLGNEWPROJECT DIALOG DISCARDABLE  0, 0, 195, 66
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "New TimeLog Project"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "&Project:",-1,6,3,123,27,WS_GROUP
+    EDITTEXT        IDC_EDITPROJECTNAME,11,15,114,12,NOT WS_BORDER
+    GROUPBOX        "Label:",-1,6,32,123,27,WS_GROUP
+    EDITTEXT        IDC_EDITPROJECTLABEL,11,44,114,12,NOT WS_BORDER
+    DEFPUSHBUTTON   "&OK",IDOK,137,7,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,137,24,50,14,NOT WS_TABSTOP
+END
+
+DLGPROJECT DIALOG DISCARDABLE  0, 0, 231, 144
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "TimeLog"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "&Project",IDC_STATIC,4,1,222,31,WS_GROUP
+    COMBOBOX        IDC_COMBOPROJECT,10,14,107,75,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL
+    PUSHBUTTON      "Ne&w",IDNEWPROJECT,125,11,37,15,NOT WS_TABSTOP
+    DEFPUSHBUTTON   "&OK",IDOK,170,11,50,15
+    GROUPBOX        "Overhead &Project",IDC_STATIC,4,33,222,31,WS_GROUP
+    COMBOBOX        IDC_COMBOPROJECTOVH,10,46,107,79,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL
+    PUSHBUTTON      "De&lete",IDDELOVERHEAD,125,43,37,15,NOT WS_TABSTOP
+    PUSHBUTTON      "O&verhead",IDOVERHEAD,169,43,50,15
+    PUSHBUTTON      "&Adjust",IDADJUST,4,124,37,14,WS_GROUP | NOT WS_TABSTOP
+    PUSHBUTTON      "&Report",IDREPORT,45,124,37,14,NOT WS_TABSTOP
+    PUSHBUTTON      "&Stop Log",IDEXIT,86,124,37,14,NOT WS_TABSTOP
+    CONTROL         "A&uto Dialog",IDC_AUTODIALOG,"Button",BS_AUTOCHECKBOX,
+                    130,125,50,11
+    PUSHBUTTON      "&Cancel",IDCANCEL,186,124,40,14
+    GROUPBOX        "&Time Period",IDC_STATIC,4,66,55,52,WS_GROUP
+    CONTROL         "&Day",IDC_RADIODAY,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,9,79,36,10
+    CONTROL         "&Month",IDC_RADIOMONTH,"Button",BS_AUTORADIOBUTTON,9,91,
+                    36,10
+    CONTROL         "&Year",IDC_RADIOYEAR,"Button",BS_AUTORADIOBUTTON,9,103,
+                    36,10
+    GROUPBOX        "&Time Display",IDC_STATIC,68,66,55,52,WS_GROUP
+    CONTROL         "&Fraction",IDC_RADIOHFRACT,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,73,79,44,10
+    CONTROL         "&h:mm",IDC_RADIOHHMM,"Button",BS_AUTORADIOBUTTON,73,91,
+                    43,10
+    GROUPBOX        "Comme&nt",IDC_STATIC,130,66,96,52,WS_GROUP
+    EDITTEXT        IDC_EDITCOMMENT,136,79,86,35,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | NOT WS_BORDER
+END
+
+DLGADJUST DIALOG DISCARDABLE  0, 0, 195, 145
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "TimeLog Adjustment"
+FONT 8, "MS Sans Serif"
+BEGIN
+    GROUPBOX        "&Project",IDC_STATIC,4,3,186,138,WS_GROUP
+    DEFPUSHBUTTON   "&OK",IDOK,133,16,50,14,WS_GROUP
+    PUSHBUTTON      "&Cancel",IDCANCEL,132,34,50,14,NOT WS_TABSTOP
+    COMBOBOX        IDC_COMBOPROJECT,9,16,112,112,CBS_DROPDOWNLIST | 
+                    CBS_SORT | WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Adjustment Date/&Time",IDC_STATIC,9,32,112,46,WS_GROUP
+    CTEXT           "&Mon",IDC_STATIC,18,67,20,8,NOT WS_GROUP
+    SCROLLBAR       IDC_SCROLLMONTH,16,57,21,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITMONTH,16,44,21,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "&Day",IDC_STATIC,37,67,18,8,NOT WS_GROUP
+    SCROLLBAR       IDC_SCROLLDAY,37,57,17,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITDAY,37,44,17,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "&Year",IDC_STATIC,55,67,21,8,NOT WS_GROUP
+    SCROLLBAR       IDC_SCROLLYEAR,54,57,22,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITYEAR,54,44,22,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "&Hr",IDC_STATIC,82,67,17,8,NOT WS_GROUP
+    SCROLLBAR       IDC_SCROLLHOUR,82,57,16,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITHOUR,82,44,16,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "M&in",IDC_STATIC,98,67,15,8,NOT WS_GROUP
+    SCROLLBAR       IDC_SCROLLMINUTE,98,57,16,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITMINUTE,98,44,16,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    GROUPBOX        "&Adjustment",IDC_STATIC,9,80,48,48,WS_GROUP
+    CTEXT           "&Hr",IDC_STATIC,17,116,17,8,NOT WS_GROUP
+    SCROLLBAR       IDC_SCROLLHOURADJ,17,105,16,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITHOURADJ,17,92,16,13,ES_AUTOHSCROLL | ES_READONLY | 
+                    NOT WS_TABSTOP
+    CTEXT           "M&in",IDC_STATIC,33,116,15,8,NOT WS_GROUP
+    SCROLLBAR       IDC_SCROLLMINUTEADJ,33,105,16,8,WS_TABSTOP
+    EDITTEXT        IDC_EDITMINUTEADJ,33,92,16,13,ES_AUTOHSCROLL | 
+                    ES_READONLY | NOT WS_TABSTOP
+    GROUPBOX        "Comme&nt",IDC_STATIC,63,80,119,48,WS_GROUP
+    EDITTEXT        IDC_EDITCOMMENT,69,94,107,30,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | NOT WS_BORDER
+END
+
+ABORTDLG DIALOG DISCARDABLE  0, 0, 127, 65
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,39,43,50,14
+    CTEXT           "Printing:",IDC_STATIC,12,10,104,10
+    EDITTEXT        IDC_EDITNAME,12,23,104,12,ES_CENTER | ES_MULTILINE | 
+                    ES_READONLY | NOT WS_BORDER
+END
+
+DLGPROJECT2 DIALOG DISCARDABLE  0, 0, 197, 97
+STYLE DS_MODALFRAME | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+CAPTION "TimeLog"
+MENU IDR_MENU1
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,138,8,50,15,WS_GROUP
+    PUSHBUTTON      "Open",IDOPEN,138,43,50,15,NOT WS_TABSTOP
+    PUSHBUTTON      "&Cancel",IDCANCEL,138,24,50,15,NOT WS_TABSTOP
+    GROUPBOX        "&Project",-1,8,8,119,31,WS_GROUP
+    COMBOBOX        IDC_COMBOPROJECT,14,21,107,75,CBS_DROPDOWNLIST | 
+                    WS_VSCROLL | WS_GROUP | WS_TABSTOP
+    GROUPBOX        "Comme&nt",-1,8,42,119,46,WS_GROUP
+    EDITTEXT        IDC_EDITCOMMENT,12,55,111,28,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | NOT WS_BORDER
+    PUSHBUTTON      "&Adjust",IDADJUST,138,75,50,15,WS_GROUP
+    PUSHBUTTON      "Close",IDCLOSE,138,59,50,15,NOT WS_TABSTOP
+END
+
+#ifdef APSTUDIO_INVOKED
+//////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // APSTUDIO_INVOKED
+
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+IDI_ICONLOG             ICON    DISCARDABLE     "ICONLOG.ICO"
+
+//////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MENU1 MENU DISCARDABLE 
+BEGIN
+    POPUP "File"
+    BEGIN
+        MENUITEM "New ",                        ID_FILE_NEWPROJECT
+        MENUITEM "Delete",                      ID_FILE_DELETE
+        MENUITEM "Overhead",                    ID_FILE_OVERHEAD
+        MENUITEM SEPARATOR
+        MENUITEM "Open",                        ID_FILE_OPENPROJECT
+        MENUITEM "Close",                       ID_FILE_CLOSEPROJECT
+        MENUITEM SEPARATOR
+        MENUITEM "Report",                      ID_FILE_REPORT
+        MENUITEM SEPARATOR
+        MENUITEM "Exit",                        ID_FILE_EXIT
+    END
+    POPUP "Options"
+    BEGIN
+        MENUITEM "Auto Dialog",                 ID_OPTIONS_AUTODIALOG
+        MENUITEM SEPARATOR
+        POPUP "Time Unit..."
+        BEGIN
+            MENUITEM "Months",                      ID_OPTIONS_TIMEUNIT_MONTHS
+
+            MENUITEM "Days",                        ID_OPTIONS_TIMEUNIT_DAYS
+            MENUITEM "Years",                       ID_OPTIONS_TIMEUNIT_YEARS
+
+        END
+        POPUP "Time Display..."
+        BEGIN
+            MENUITEM "Fraction",                    ID_OPTIONS_TIMEDISPLAY_FRACTION
+
+            MENUITEM "hh:mm",                       ID_OPTIONS_TIMEDISPLAY_HHMM
+
+        END
+    END
+END
+
+
+#ifndef APSTUDIO_INVOKED
+////////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
